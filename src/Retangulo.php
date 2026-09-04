@@ -1,6 +1,6 @@
 <?php
-namespace App;
 
+namespace App;
 use InvalidArgumentException;
 
 class Retangulo {
@@ -29,11 +29,8 @@ class Retangulo {
         return $this->altura * $this->largura;
     }
 
-    public function redimensionar(float $altura, float $largura): void {
-        
-        $this->validarDimensoes($altura, $largura);
-
-        
+    public function redimensionar(float $altura, float $largura): void {   
+        $this->validarDimensoes($altura, $largura);     
         $this->altura = $altura;
         $this->largura = $largura;
     }
