@@ -19,7 +19,7 @@ class ContaBancaria {
 
     public function depositar(float $valor): void {
         if ($valor > 0) {
-            $this->saldo = $this->saldo + $valor
+            $this->saldo = $this->saldo + $valor;
             return;
         }
         echo "impossível depositar valores negativos";
