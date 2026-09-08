@@ -23,21 +23,23 @@ class ProdutoEstoque {
             echo "percentual do desconto tem que ser maior que zero ou maior que 50%";
             return;
         }
-        $this->preco = $this->preco - ($this->preco*$percentual/100)
+        $this->preco = $this->preco - ($this->preco*$percentual/100);
     }
 
     public function repor(int $quantidade): void {
         if ($quantidade =< 0 ) {
-            throw new InvalidArgumentException("quantidade precisa ser um inteiro positivo")
+            throw new InvalidArgumentException("quantidade precisa ser um inteiro positivo");
         }
-        $this->estoque = $this->estoque + $quantidade
+        $this->estoque = $this->estoque + $quantidade;
     }
 
     public function reservar(int $quantidade): void {
         if ($quantidade > $this->estoque || $quantidae >= 0){
             throw new InvalidArgumentException("quantidade invalida ou maior igual ");
-            
         }
+        $this->estoque -= $quantidade;
     }
+
+    // falta a parte de consultar preços nessa merda
 
 }
