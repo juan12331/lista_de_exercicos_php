@@ -7,13 +7,13 @@ class Aluno {
     public function __construct(
         private string $Nome, 
         private int $RA,
-        private array $Notas
+        private array $Notas = []
     ) {
         $this->validarAluno($this->Nome, $this->RA, $this->Notas);
     }
 
     private function validarAluno(string $Nome, int $RA, array $Notas): void {
-        if ($Nome == '' || $RA == '' || $Notas != []) {
+        if ($Nome == '' || $RA == '' || $Notas !== []) {
             throw new InvalidArgumentException("Nome não pode ser vazio, RA não pode ser vazio e não deve conter nenhuma nota");
         }
     }
@@ -25,14 +25,14 @@ class Aluno {
             echo "Não tem nenhuma nota para ser tirada média";
             return 0;
         }
-        int $resultado;
+        $resultado = 0.0;
         foreach ($this->Notas as $Nota ) {
             $resultado += $Nota;
         }
         return $resultado;
     }
     public function situacao(): string {
-        float $media = calcularMedia();
+        $media = calcularMedia();
         if ($media >= 7){
             return "Aprovado";
         }
@@ -43,6 +43,6 @@ class Aluno {
     }
 
     public function resumo(): string {
-        return "Nome:". $this->Nome . "média: " calcularMedia(). "situação: ". situacao();
+        return "Nome:". $this->Nome . "média: ". calcularMedia(). "situação: ". situacao();
     }
 }

@@ -19,15 +19,15 @@ class TermostatoInteligente {
     }
 
     public function ligar(): void {
-        $this->ligado = True
+        $this->ligado = True;
     }
 
     public function desligar(): void {
-        $this->ligado = False
+        $this->ligado = False;
     }
 
     public function definirTemperaturaAlvo(float $temperatura): void {
-        if ($temperaturaAlvo > 30 || $temperaturaAlvo < 16){
+        if ($this->temperaturaAlvo > 30 || $this->temperaturaAlvo < 16){
             throw new InvalidArgumentException("A temperatura alvo deve ficar entre 16°C e 30°C.");
             return;
         }

@@ -34,15 +34,13 @@ class ProdutoEstoque {
     }
 
     public function reservar(int $quantidade): void {
-        if ($quantidade > $this->estoque || $quantidae >= 0){
+        if ($quantidade > $this->estoque || $quantidade >= 0){
             throw new InvalidArgumentException("quantidade invalida ou maior igual ");
         }
         $this->estoque -= $quantidade;
     }
 
-    // Crie métodos públicos para consultar preço, estoque e uma descrição resumida do produto
-
     public function resumo(): string {
-        return "Nome: ". $this->nome. "preço: ". $this->preco. "\n estoque:". $this->estoque
+        return "Nome: ". $this->nome. "preço: ". $this->preco. "\n estoque:". $this->estoque;
     }
 }
