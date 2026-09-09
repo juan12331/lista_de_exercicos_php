@@ -40,6 +40,9 @@ class ProdutoEstoque {
         $this->estoque -= $quantidade;
     }
 
-    // falta a parte de consultar preços nessa merda
+    // Crie métodos públicos para consultar preço, estoque e uma descrição resumida do produto
 
+    public function resumo(): string {
+        return "Nome: ". $this->nome. "preço: ". $this->preco. "\n estoque:". $this->estoque
+    }
 }
