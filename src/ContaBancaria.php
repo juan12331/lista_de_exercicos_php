@@ -11,7 +11,7 @@ class ContaBancaria {
         $this->validarSaldo($this->saldo);
     }
          
-    private function validarDimensoes(float $saldo): void {
+    private function validarSaldo(float $saldo): void {
         if ($saldo < 0) {
             throw new InvalidArgumentException("saldo inicial deverá ser maior ou igual a zero");
         }
