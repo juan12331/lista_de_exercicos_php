@@ -247,3 +247,6 @@ Critério central: a index.php deve interagir com o drone por suas ações públ
 consumo, capacidade e mudança de estado pertencem à classe.
 Entrega final: um único projeto contendo as 10 classes, todos os testes na index.php, comentário de
 identificação no início do arquivo e projeto compactado em .zip para envio no Moodle.
+
+
+link do github: https://github.com/juan12331/lista_de_exercicos_php
