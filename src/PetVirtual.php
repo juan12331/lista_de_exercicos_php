@@ -10,10 +10,10 @@ class PetVirtual {
         private float $energia,
         private float $felicidade
     ) {
-        $this->validarAluno($this->nome, $this->fome, $this->energia, $this->felicidade);
+        $this->validarPet($this->nome, $this->fome, $this->energia, $this->felicidade);
     }
 
-    private function validarAluno(string $nome, float $fome, float $energia, float $felicidade): void {
+    private function validarPet(string $nome, float $fome, float $energia, float $felicidade): void {
         if ($nome == '' || $fome > 100 || $fome < 0 || $energia > 100 || $energia < 0 || $felicidade > 100 || $felicidade < 0) {
             throw new InvalidArgumentException("valores de fome, energia, e felicidade devem estar em uma escala de 0 a 100 e o nome não pode estar vazio");
         }
@@ -54,6 +54,5 @@ class PetVirtual {
         return "Pet: {$this->nome} | Fome: {$this->fome} | Energia: {$this->energia} | Felicidade: {$this->felicidade}";
     }
 }
-```
 
-Só uma observação: mantive **`validarAluno()`** porque estava no seu código, embora o nome provavelmente devesse ser `validarPet()` ou `validarDados()`. Não precisa mudar se o professor não exigiu o nome.
+

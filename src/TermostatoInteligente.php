@@ -9,7 +9,7 @@ class TermostatoInteligente {
         private float $temperaturaAlvo,
         private bool $ligado
     ) {
-        $this->validarTemperatura($this->temperaturaAlvo);
+        $this->validarTermostato($this->temperaturaAlvo);
     }
 
     private function validarTermostato($temperaturaAlvo): void {

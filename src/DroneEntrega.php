@@ -6,10 +6,10 @@ use InvalidArgumentException;
 class DroneEntrega {
     public function __construct(
         private string $identificador,
-        private int $bateria = 100,
-        private float $cargaAtualKg = 0,
-        private float $cargaMaximaKg = 0,
-        private string $status = 'disponivel'
+        private int $bateria,
+        private float $cargaAtualKg ,
+        private float $cargaMaximaKg ,
+        private string $status
     ) {
         if ($identificador == '' || $cargaMaximaKg <= 0) {
             throw new InvalidArgumentException("O identificador não pode estar vazio e a carga máxima deve ser positiva.");

@@ -26,7 +26,7 @@ class PersonagemRPG {
             $this->vidaAtual = 0;
             return;
         }
-        $this->vidaAtual = $this->vidaAtual - $dano
+        $this->vidaAtual = $this->vidaAtual - $dano;
     }
     public function curar(int $pontos): void {
         if ($pontos < 0){
@@ -36,7 +36,7 @@ class PersonagemRPG {
             $this->vidaAtual = $this->vidaMaxima;
             return;
         }
-        $this->vidaAtual = $this->vidaAtual + $pontos
+        $this->vidaAtual = $this->vidaAtual + $pontos;
     }
     public function executarAtaque(int $custoEnergia, int $danoBase): int {
         if ($this->vidaAtual <= 0  || $this->energia < $custoEnergia) {
@@ -53,6 +53,6 @@ class PersonagemRPG {
         return $this->vidaAtual > 0;
     }
     public function status(): string{
-        return "vida: ". $this->vidaAtual . "\n energia: ". $this->energia
+        return "vida: ". $this->vidaAtual . "\n energia: ". $this->energia;
     }
 }

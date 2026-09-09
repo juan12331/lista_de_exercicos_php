@@ -3,13 +3,13 @@ namespace App;
 
 use InvalidArgumentException;
 
-class ContaBancaria {
+class Aluno {
     public function __construct(
         private string $Nome, 
         private int $RA,
         private array $Notas
     ) {
-        $this->validarAluno($this->$Nome, $this->RA, $this->Notas);
+        $this->validarAluno($this->Nome, $this->RA, $this->Notas);
     }
 
     private function validarAluno(string $Nome, int $RA, array $Notas): void {
@@ -26,7 +26,7 @@ class ContaBancaria {
             return 0;
         }
         int $resultado;
-        foreach ($Nota as $this->Notas) {
+        foreach ($this->Notas as $Nota ) {
             $resultado += $Nota;
         }
         return $resultado;
@@ -37,12 +37,12 @@ class ContaBancaria {
             return "Aprovado";
         }
         if ($media >= 5){
-            return "Recuperação"
+            return "Recuperação";
         }
-        return "Reprovado"
+        return "Reprovado";
     }
 
     public function resumo(): string {
-        return "Nome:". $this->Nome . "média: " calcularMedia(). "situação: ". situacao()
+        return "Nome:". $this->Nome . "média: " calcularMedia(). "situação: ". situacao();
     }
 }
