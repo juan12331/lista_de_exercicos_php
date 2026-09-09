@@ -20,6 +20,12 @@ use App\PetVirtual;
 use App\CarteiraDigital;
 use App\ConfiguracaoJogo;
 use App\DroneEntrega;
+
+// Nome:  Juan Miguel Mauro Rodrigues
+// RA:  2202020
+// Turma: 1BCC-A
+// Disciplina: Programação Orientada a Objeto
+
  
 
  
