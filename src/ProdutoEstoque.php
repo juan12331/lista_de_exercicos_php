@@ -28,14 +28,14 @@ class ProdutoEstoque {
 
     public function repor(int $quantidade): void {
         if ($quantidade <= 0 ) {
-            throw new InvalidArgumentException("quantidade precisa ser um inteiro positivo");
+            echo "quantidade precisa ser um inteiro positivo";
         }
         $this->estoque = $this->estoque + $quantidade;
     }
 
     public function reservar(int $quantidade): void {
         if ($quantidade > $this->estoque || $quantidade >= 0){
-            throw new InvalidArgumentException("quantidade invalida ou maior igual ");
+            echo "quantidade invalida ou maior igual ";
         }
         $this->estoque -= $quantidade;
     }

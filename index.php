@@ -74,15 +74,15 @@ echo $conta2->resumo() . " (estado independente da conta1)\n";
  
 // 3
  
-$alunoAprovado = new Aluno("Carla", "RA001");
+$alunoAprovado = new Aluno("Carla", 001);
 $alunoAprovado->adicionarNota(8);
 $alunoAprovado->adicionarNota(7.5);
  
-$alunoRecuperacao = new Aluno("Diego", "RA002");
+$alunoRecuperacao = new Aluno("Diego", 002);
 $alunoRecuperacao->adicionarNota(6);
 $alunoRecuperacao->adicionarNota(5);
  
-$alunoReprovado = new Aluno("Elisa", "RA003");
+$alunoReprovado = new Aluno("Elisa", 003);
 $alunoReprovado->adicionarNota(3);
 $alunoReprovado->adicionarNota(4);
  
@@ -125,7 +125,7 @@ try {
 
 // 5 
  
-$termostato = new TermostatoInteligente(20, 22);
+$termostato = new TermostatoInteligente(20, 22, True);
 echo "Desligado -> ação: {$termostato->acaoNecessaria()}\n";
  
 $termostato->ligar();
@@ -145,8 +145,8 @@ try {
  
 // 6
  
-$heroi = new PersonagemRPG("Guerreiro", 100);
-$mago = new PersonagemRPG("Mago", 60);
+$heroi = new PersonagemRPG("Juan_heroi", 100, 100, 100);
+$mago = new PersonagemRPG("Juan_mago", 100, 100, 100);
  
 $heroi->sofrerDano(30);
 echo "Guerreiro após dano: {$heroi->status()}\n";
@@ -175,7 +175,7 @@ echo "Tentativa de ataque com personagem derrotado é bloqueada.\n";
  
 //7 
  
-$pet = new PetVirtual("Rex");
+$pet = new PetVirtual("Ratinho (eu)", 100, 100, 100);
 echo "Estado inicial: {$pet->status()}\n";
  
 $pet->alimentar();
@@ -241,8 +241,8 @@ echo "original === copia? " . ($original === $copia ? 'true' : 'false (instânci
 
 // 10 aqui
  
-$drone1 = new DroneEntrega("DR-001", 10);
-$drone2 = new DroneEntrega("DR-002", 25);
+$drone1 = new DroneEntrega("DR-001", 100, 0, 10, "disponivel");
+$drone2 = new DroneEntrega("DR-002", 100, 0, 6, "disponivel");
  
 $drone1->carregarPacote(5);
 $drone1->decolar(3);

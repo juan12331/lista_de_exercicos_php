@@ -32,7 +32,7 @@ class Aluno {
         return $resultado;
     }
     public function situacao(): string {
-        $media = calcularMedia();
+        $media = $this->calcularMedia();
         if ($media >= 7){
             return "Aprovado";
         }
@@ -43,6 +43,6 @@ class Aluno {
     }
 
     public function resumo(): string {
-        return "Nome:". $this->Nome . "média: ". calcularMedia(). "situação: ". situacao();
+        return "Nome:". $this->Nome . "média: ". $this->calcularMedia(). "situação: ". $this->situacao();
     }
 }
